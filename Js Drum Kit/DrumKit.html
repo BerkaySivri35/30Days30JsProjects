@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsDrumKit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+</head>
+
+<body>
+
+    <div class="d-flex justify-content-center align-items-center"
+        style="background-image: url(images/concert-hall-03.jpg);height: 100vh;">
+        <div class="container-fluid bg-secondary bg-opacity-75 pt-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded ">
+                    <div class="row justify-content-center">A</div>
+                    <div class="row "><span class="text-center">Rim</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">S</div>
+                    <div class="row"><span class="text-center">Snare</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">D</div>
+                    <div class="row"><span class="text-center">Clap</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">F</div>
+                    <div class="row"><span class="text-center">Snare</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">G</div>
+                    <div class="row"><span class="text-center">Kick</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">H</div>
+                    <div class="row"><span class="text-center">Hihat</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">J</div>
+                    <div class="row"><span class="text-center">Rim</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">K</div>
+                    <div class="row"><span class="text-center">Rim</span></div>
+                </div>
+                <div class="col-sm-3 col-md-1 m-3 shadow-lg p-3 mb-5 bg-body rounded border anim">
+                    <div class="row justify-content-center">L</div>
+                    <div class="row"><span class="text-center">Triangle</span></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <audio data-key="65" src="sounds/37_SmoothRim_856.wav"></audio>
+    <audio data-key="83" src="sounds/38_SmoothSnare_856.wav"></audio>
+    <audio data-key="68" src="sounds/39_SmoothClap_856.wav"></audio>
+    <audio data-key="70" src="sounds/40_SmoothSnare_856.wav"></audio>
+    <audio data-key="71" src="sounds/41_SmoothKick_856.wav"></audio>
+    <audio data-key="72" src="sounds/42_SmoothHiHat_856.wav"></audio>
+    <audio data-key="74" src="sounds/45_SmoothRim_856.wav"></audio>
+    <audio data-key="75" src="sounds/47_SmoothSub_856.wav"></audio>
+    <audio data-key="76" src="sounds/51_SmoothTriangle_856.wav"></audio>
+    <script>
+        window.addEventListener('keydown', function (e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            //console.log(e.keyCode)
+            if (!audio) return;
+            audio.currentTime = 0; // newind to the start
+            audio.play();
+            //anim.classList.add('playing')
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
